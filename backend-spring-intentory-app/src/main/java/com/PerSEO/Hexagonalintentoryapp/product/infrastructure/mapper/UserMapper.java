@@ -5,14 +5,16 @@ import com.PerSEO.Hexagonalintentoryapp.product.infrastructure.UserEntity;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
+import org.mapstruct.Mappings;
 
 @Mapper(componentModel = "spring")
 public interface UserMapper {
-    @Mapping(
+    @Mappings(
             {
                     @Mapping(source = "id",target = "id"),
                     @Mapping(source = "username",target = "username"),
-                    @Mapping(source = "lastname",target = "lastname"),
+                    @Mapping(source = "firstName",target = "firstName"),
+                    @Mapping(source = "lastName",target = "lastName"),
                     @Mapping(source = "email",target = "email"),
                     @Mapping(source = "address",target = "address"),
                     @Mapping(source = "cellphone",target = "cellphone"),

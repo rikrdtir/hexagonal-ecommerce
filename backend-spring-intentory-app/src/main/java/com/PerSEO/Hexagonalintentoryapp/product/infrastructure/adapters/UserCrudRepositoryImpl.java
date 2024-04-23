@@ -32,7 +32,10 @@ public class UserCrudRepositoryImpl implements IUserRepository {
 
     @Override
     public User findById(Integer id) {
-        return userMapper.toUser(iUserCrudRepository.findById(id).get());
+        return userMapper.toUser(iUserCrudRepository.findById(id).orElseThrow(
+                ()-> new RuntimeException("La categoría " +id+ "no encontrado")
+        ));
+
     }
 
     @Override

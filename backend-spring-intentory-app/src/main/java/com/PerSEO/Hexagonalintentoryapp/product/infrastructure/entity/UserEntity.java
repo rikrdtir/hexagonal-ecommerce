@@ -1,4 +1,4 @@
-package com.PerSEO.Hexagonalintentoryapp.product.infrastructure;
+package com.PerSEO.Hexagonalintentoryapp.product.infrastructure.entity;
 
 import com.PerSEO.Hexagonalintentoryapp.product.domain.model.UserType;
 import jakarta.persistence.*;

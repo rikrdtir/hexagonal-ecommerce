@@ -1,7 +1,7 @@
 package com.PerSEO.Hexagonalintentoryapp.product.infrastructure.mapper;
 
 import com.PerSEO.Hexagonalintentoryapp.product.domain.model.User;
-import com.PerSEO.Hexagonalintentoryapp.product.infrastructure.UserEntity;
+import com.PerSEO.Hexagonalintentoryapp.product.infrastructure.entity.UserEntity;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

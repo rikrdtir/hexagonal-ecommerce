@@ -11,8 +11,6 @@ public class CategoryCrudRepositoryImpl implements ICategoryRepository {
     private final CategoryMapper categoryMapper;
 
     /// constructor
-
-
     public CategoryCrudRepositoryImpl(ICategoryCrudRespository iCategoryCrudRespository, CategoryMapper categoryMapper) {
         this.iCategoryCrudRespository = iCategoryCrudRespository;
         this.categoryMapper = categoryMapper;
@@ -33,12 +31,15 @@ public class CategoryCrudRepositoryImpl implements ICategoryRepository {
     public Category findById(Integer id) {
 
         return categoryMapper.toCategory( iCategoryCrudRespository.findById(id).orElseThrow(
-                ()-> new RuntimeException("La categoría " +id+ "no encontrado")
+                ()-> new RuntimeException("Categoría " +id+ "no encontrado")
         ));
     }
 
     @Override
     public void deleteById(Integer id) {
+        iCategoryCrudRespository.findById(id).orElseThrow(
+                ()-> new RuntimeException("Categoría " +id+ "no existe")
+        );
         iCategoryCrudRespository.deleteById(id);
     }
 }

@@ -17,7 +17,7 @@ public class UserCrudRepositoryImpl implements IUserRepository {
 
     @Override
     public User save(User user) {
-        return userMapper.toUser( iUserCrudRepository.save( userMapper.toUserEntity(user) ));
+        return userMapper.toUser(iUserCrudRepository.save( userMapper.toUserEntity(user)));
     }
 
     @Override

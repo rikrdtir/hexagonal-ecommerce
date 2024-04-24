@@ -3,6 +3,8 @@ package com.PerSEO.Hexagonalintentoryapp.product.infrastructure.rest;
 import com.PerSEO.Hexagonalintentoryapp.product.application.CategoryService;
 import com.PerSEO.Hexagonalintentoryapp.product.domain.model.Category;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -22,8 +24,11 @@ public class CategoryController {
      * @return
      */
     @PostMapping
-    public Category save(@RequestBody Category category){
-        return categoryService.save(category);
+    public ResponseEntity<Category> save(@RequestBody Category category){
+        return new ResponseEntity<>(
+                categoryService.save(category),
+                HttpStatus.CREATED
+        );
     }
 
     /**
@@ -31,8 +36,8 @@ public class CategoryController {
      * @return
      */
     @GetMapping
-    public Iterable<Category> finAll(){
-        return categoryService.findAll();
+    public ResponseEntity<Iterable<Category>> finAll(){
+        return ResponseEntity.ok(categoryService.findAll());
     }
 
     /**
@@ -41,13 +46,14 @@ public class CategoryController {
      * @return
      */
     @GetMapping("/{id}")
-    public Category findById(@PathVariable Integer id){
-        return categoryService.findById(id);
+    public ResponseEntity<Category> findById(@PathVariable Integer id){
+        return ResponseEntity.ok( categoryService.findById(id));
     }
 
     @DeleteMapping("/{id}")
-    public void deleteById(@PathVariable Integer id){
+    public ResponseEntity<HttpStatus> deleteById(@PathVariable Integer id){
         categoryService.deleteById(id);
+        return ResponseEntity.ok().build();
     }
 
 }

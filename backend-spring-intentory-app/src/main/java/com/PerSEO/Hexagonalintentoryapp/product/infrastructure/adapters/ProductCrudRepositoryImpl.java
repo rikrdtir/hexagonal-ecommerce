@@ -3,16 +3,16 @@ package com.PerSEO.Hexagonalintentoryapp.product.infrastructure.adapters;
 import com.PerSEO.Hexagonalintentoryapp.product.domain.model.Product;
 import com.PerSEO.Hexagonalintentoryapp.product.domain.ports.IProductRepository;
 
-import com.PerSEO.Hexagonalintentoryapp.product.infrastructure.mapper.ProductMaper;
+import com.PerSEO.Hexagonalintentoryapp.product.infrastructure.mapper.IProductMapper;
 import org.springframework.stereotype.Repository;
 
 @Repository
 public class ProductCrudRepositoryImpl implements IProductRepository {
     private final IProductCrudRepository iProductCrudRepository;
-    private final ProductMaper productMaper;
+    private final IProductMapper productMaper;
 
     // constructor
-    public ProductCrudRepositoryImpl(IProductCrudRepository iProductCrudRepository, ProductMaper productMaper) {
+    public ProductCrudRepositoryImpl(IProductCrudRepository iProductCrudRepository, IProductMapper productMaper) {
         this.iProductCrudRepository = iProductCrudRepository;
         this.productMaper = productMaper;
     }

@@ -8,12 +8,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("api/v1/orders")
+@RequestMapping("api/v1_1/orders")
 @Slf4j
 public class OrderController {
 
     private final OrderService orderService;
-
     public OrderController(OrderService orderService) {
         this.orderService = orderService;
     }
@@ -23,10 +22,9 @@ public class OrderController {
             order.setOrderState(OrderState.CANCELLED);
 
         }else {
-
             order.setOrderState(OrderState.CONFIRMED);
-
         }
+
         return ResponseEntity.ok(orderService.save(order));
     }
     @PostMapping("/update/state/order")

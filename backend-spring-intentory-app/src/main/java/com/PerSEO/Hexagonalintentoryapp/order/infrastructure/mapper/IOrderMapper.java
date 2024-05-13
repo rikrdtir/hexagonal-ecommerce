@@ -14,10 +14,9 @@ public interface IOrderMapper {
             {
                     @Mapping(source = "id", target = "id"),
                     @Mapping(source = "dateCreated", target = "dateCreated"),
+                    @Mapping(source = "orderProducts", target = "orderProducts"),
                     @Mapping(source = "orderState", target = "orderState"),
                     @Mapping(source = "userEntity.id", target = "userId"),
-                    @Mapping(source = "orderProducts", target = "orderProducts"),
-
             }
     )
 

@@ -7,6 +7,7 @@ public class OrderService {
     private final IOrderRepository iOrderRepository;
 
     public OrderService(IOrderRepository iOrderRepository) {
+        // -------------------
         this.iOrderRepository = iOrderRepository;
     }
 
@@ -16,6 +17,7 @@ public class OrderService {
      * @return
      */
     public Order save(Order order){
+       // ----------------------
         return this.iOrderRepository.save(order);
     }
 
@@ -25,6 +27,7 @@ public class OrderService {
      */
 
     public Iterable<Order> findAll(){
+        // ---------------------
         return this.iOrderRepository.findAll();
     }
 
@@ -34,6 +37,7 @@ public class OrderService {
      * @return
      */
     public Iterable<Order> findByUserId(Integer userId){
+        // -------------------------
         return this.iOrderRepository.findByUserId(userId);
     }
 
@@ -43,8 +47,19 @@ public class OrderService {
      * @param state
      */
     public void updateStateById(Integer id, String state){
+        // -----------------
         this.iOrderRepository.updateStateById(id, state);
     }
 
+    /**
+     * Find order by id
+     * @param id
+     * @return
+     */
+    public Order findById(Integer id){
+        // -------------------------
+        return this.iOrderRepository.findById(id);
+
+    }
 
 }

@@ -31,7 +31,7 @@ public class OrderCrudRepositoryImpl implements IOrderRepository {
     @Override
     public Order findById(Integer id) {
         return iOrderMapper.toOrder( iOrderCrudRepository.findById(id).orElseThrow(
-                ()-> new RuntimeException("Orden con I: "+id+" no encontrada")
+                ()-> new RuntimeException("Orden con Id: "+ id +" no encontrada")
         ));
     }
 

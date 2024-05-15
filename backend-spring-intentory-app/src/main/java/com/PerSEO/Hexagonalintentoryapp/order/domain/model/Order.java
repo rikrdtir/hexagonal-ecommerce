@@ -16,6 +16,8 @@ public class Order {
     private Integer userId;
 
     public Order() {
+        // -------------------
+
         orderProducts = new ArrayList<>();
     }
 

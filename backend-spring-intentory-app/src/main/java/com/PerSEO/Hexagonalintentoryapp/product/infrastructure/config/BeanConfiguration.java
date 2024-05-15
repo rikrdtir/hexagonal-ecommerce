@@ -1,5 +1,7 @@
 package com.PerSEO.Hexagonalintentoryapp.product.infrastructure.config;
 
+import com.PerSEO.Hexagonalintentoryapp.order.application.OrderService;
+import com.PerSEO.Hexagonalintentoryapp.order.domain.port.IOrderRepository;
 import com.PerSEO.Hexagonalintentoryapp.product.application.CategoryService;
 import com.PerSEO.Hexagonalintentoryapp.product.application.ProductService;
 import com.PerSEO.Hexagonalintentoryapp.product.application.UserService;
@@ -23,6 +25,9 @@ public class BeanConfiguration {
     public ProductService productService(IProductRepository iProductRepository){
         return new ProductService(iProductRepository);
     }
-
+    @Bean
+    public OrderService orderService(IOrderRepository iOrderRepository){
+        return new OrderService(iOrderRepository);
+    }
 
 }

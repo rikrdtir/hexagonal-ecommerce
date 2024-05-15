@@ -8,7 +8,7 @@ import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
 
 @Mapper(componentModel = "spring")
-public interface ProductMaper {
+public interface IProductMapper {
 
     @Mappings(
             {

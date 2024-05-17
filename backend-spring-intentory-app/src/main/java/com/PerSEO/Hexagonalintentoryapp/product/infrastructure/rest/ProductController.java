@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("api/v1_1/admin/products")
 @Slf4j
 @AllArgsConstructor
+@CrossOrigin(origins = "http://localhost:4200")
 public class ProductController {
 
     private final ProductService productService;
@@ -37,7 +38,6 @@ public class ProductController {
     public ResponseEntity<HttpStatus> deleteById(@PathVariable Integer id){
         productService.delteById(id);
         return ResponseEntity.ok().build();
-
     }
 
 

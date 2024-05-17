@@ -16,6 +16,7 @@ It is currently under development and in constant improvement.
 
     Technologies used:
     - Angular 16
+    - Bootstrap (Pronto será reemplazado con Angular Material)
 
 # About app
 

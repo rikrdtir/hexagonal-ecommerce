@@ -1,0 +1,53 @@
+<mat-sidenav-container autosize>
+  <mat-sidenav #sidenav mode="side" opened="true" class="">
+    <mat-nav-list>
+      <!-- menu -->
+      <mat-list-item mat-list-icon class="" (click)="isExpanded = !isExpanded">
+        <mat-icon mat-list-icon class="chevron-button sidenav-button"
+          [ngClass]="{'rotated': isExpanded}">chevron_right</mat-icon>
+      </mat-list-item>
+      <!-- end menu -->
+
+      <mat-list-item [routerLink]="'home'">
+        <mat-icon mat-list-icon>home</mat-icon>
+        <span *ngIf="isExpanded">
+          Home
+        </span>
+      </mat-list-item>
+
+      <mat-list-item>
+        <mat-icon mat-list-icon>account_circle</mat-icon>
+        <span *ngIf="isExpanded">
+          Users
+        </span>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon mat-list-icon>category</mat-icon>
+        <span *ngIf="isExpanded">
+          Categories
+        </span>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon mat-list-icon>loyalty</mat-icon>
+        <span *ngIf="isExpanded">
+          Products
+        </span>
+      </mat-list-item>
+
+      <mat-list-item>
+        <mat-icon mat-list-icon>add_shopping_cart</mat-icon>
+        <span *ngIf="isExpanded">
+          Orders
+        </span>
+      </mat-list-item>
+
+
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <div class="content">
+    <mat-toolbar>Title here</mat-toolbar>
+
+    <router-outlet></router-outlet>
+  </div>
+</mat-sidenav-container>

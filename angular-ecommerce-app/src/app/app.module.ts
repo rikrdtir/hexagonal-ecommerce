@@ -1,28 +1,34 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { SharedModule } from './shared/shared.module'
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { ProducListComponent } from './components/product/produc-list/produc-list.component';
+// -- app modules
+import { ProductModule } from './product/product.module';
+import { OrdersModule } from './orders/orders.module';
+import { SharedModule } from './shared/shared.module'
+
 /// Material
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    ProducListComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
+
+    // app modules
     SharedModule,
+    ProductModule,
+    OrdersModule,
+
+    // end app modules
     AppRoutingModule //Routing
+
   ],
   providers: [],
   bootstrap: [AppComponent]

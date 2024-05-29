@@ -1,24 +1,34 @@
-mat-sidenav-container{
-  height: 100%;
-  mat-sidenav{
+/* mat-sidenav-container{ */
+/*   height: 100%; */
+/*   mat-sidenav{ */
+/**/
+/*     mat-nav-list{ */
+/**/
+/*       .chevron-button{ */
+/*         transition: 300ms ease-in-out; */
+/*         transform: rotate(0deg); */
+/*         right: 0; */
+/*         float: right; */
+/*         position: absolute; */
+/**/
+/*       } */
+/**/
+/*       .chevron-button.rotated{ */
+/*         transform: rotate(180deg); */
+/**/
+/*       } */
+/**/
+/*     } */
+/*   } */
+/**/
+/* } */
 
-    mat-nav-list{
+mat-sidenav{
+width: 180px;
+}
 
-      .chevron-button{
-        transition: 300ms ease-in-out;
-        transform: rotate(0deg);
-        right: 0;
-        float: right;
-        position: absolute;
-
-      }
-
-      .chevron-button.rotated{
-        transform: rotate(180deg);
-
-      }
-
-    }
-  }
-
+mat-expansion-panel{
+  margin: 0px;
+  border-radius: 0px;
+  box-shadow: none;
 }

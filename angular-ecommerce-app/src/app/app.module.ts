@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductModule } from './product/product.module';
 import { OrdersModule } from './orders/orders.module';
 import { SharedModule } from './shared/shared.module'
+import { AuthModule } from './auth/auth.module';
 
 /// Material
 
@@ -25,11 +26,12 @@ import { SharedModule } from './shared/shared.module'
     SharedModule,
     ProductModule,
     OrdersModule,
+    AuthModule,
 
     // end app modules
     AppRoutingModule //Routing
-
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })

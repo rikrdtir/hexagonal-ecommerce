@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 // material
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -17,13 +17,13 @@ import { MatExpansionModule } from '@angular/material/expansion';
 // import { MatFormFieldModule } from '@angular/material/form-field';
 // components
 import { DashboardComponent } from './components/template/dashboard/dashboard.component';
-import { SharedRoutingModule } from './shared-routing.module';
 import { DemoComponent } from './components/demo/demo.component';
 
 @NgModule({
   declarations: [
     DashboardComponent,
     DemoComponent,
+
   ],
   imports: [
     CommonModule,
@@ -40,8 +40,9 @@ import { DemoComponent } from './components/demo/demo.component';
     // MatMenuModule,
     // MatFormFieldModule,
     // MatSelectModule,
-    // router last
-    SharedRoutingModule,
+
+    // routers
+    RouterModule,
     RouterOutlet
   ],
   exports: [

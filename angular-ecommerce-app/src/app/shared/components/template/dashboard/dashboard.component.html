@@ -4,6 +4,12 @@
     <button type="" mat-icon-button (click)="sidenav.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
+    <!-- <br> -->
+    <hr>
+    <div class="">
+      <button type="" routerLink="/auth/login">logouth</button>
+
+    </div>
   </mat-toolbar-row>
 
 </mat-toolbar>
@@ -23,8 +29,8 @@
             </mat-panel-description>
           </mat-expansion-panel-header>
           <mat-nav-list>
-            <a mat-list-item href="">sub Menu 1.1</a>
-            <a mat-list-item href="">sub Menu 1.2</a>
+            <a mat-list-item routerLink="/dashboard/categories" href="">Categories</a>
+            <a mat-list-item routerLink="/dashboard/products">Products</a>
           </mat-nav-list>
         </mat-expansion-panel><!-- end block -->
 

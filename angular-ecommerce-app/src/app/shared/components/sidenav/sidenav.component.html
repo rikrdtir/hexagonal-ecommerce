@@ -1,0 +1,59 @@
+<mat-nav-list>
+  <mat-accordion>
+
+    <mat-list-item [routerLink]="'/auth/login'">
+      <mat-icon mat-list-icon>login</mat-icon>
+      <span>
+        Login
+      </span>
+    </mat-list-item>
+
+    <mat-divider></mat-divider>
+
+    <mat-list-item [routerLink]="'/auth/login'">
+      <mat-icon mat-list-icon>list_alt</mat-icon>
+      <span>
+        orders
+      </span>
+    </mat-list-item>
+
+    <mat-divider></mat-divider>
+
+
+    <mat-expansion-panel><!-- block 1 -->
+      <mat-expansion-panel-header opened="true">
+        <mat-panel-title>
+          <mat-icon mat-list-icon>home</mat-icon>
+        </mat-panel-title>
+        <mat-panel-description>
+          products
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <mat-nav-list>
+        <a mat-list-item routerLink="/dashboard/categories" href="">Categories</a>
+        <a mat-list-item routerLink="/dashboard/products">Products</a>
+      </mat-nav-list>
+    </mat-expansion-panel><!-- end block 1 -->
+
+    <mat-divider></mat-divider>
+
+
+    <mat-expansion-panel><!-- block 2 -->
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <mat-icon mat-list-icon>home</mat-icon>
+        </mat-panel-title>
+        <mat-panel-description>
+          menu 1
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <mat-nav-list>
+        <a mat-list-item href="">sub Menu 2.1</a>
+        <a mat-list-item href="">sub Menu 2.2</a>
+        <a mat-list-item href="">sub Menu 2.3</a>
+      </mat-nav-list>
+    </mat-expansion-panel><!-- end block -->
+
+
+  </mat-accordion>
+</mat-nav-list>

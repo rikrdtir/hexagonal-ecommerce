@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("api/v1_1/admin/categories")
 @Slf4j
+@CrossOrigin(origins = "http://localhost:4200")
 public class CategoryController {
     private final CategoryService categoryService;
 
@@ -38,6 +39,7 @@ public class CategoryController {
     @GetMapping
     public ResponseEntity<Iterable<Category>> finAll(){
         return ResponseEntity.ok(categoryService.findAll());
+
     }
 
     /**

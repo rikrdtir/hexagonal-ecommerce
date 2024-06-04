@@ -1,0 +1,9 @@
+mat-sidenav{
+width: 180px;
+}
+
+mat-expansion-panel{
+  margin: 0px;
+  border-radius: 0px;
+  box-shadow: none;
+}

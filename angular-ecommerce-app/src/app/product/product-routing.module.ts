@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ProductListComponent } from './pages/product/product-list/product-list.component';
 import { CategoryListComponent } from './pages/category/category-list/category-list.component';
-import { DashboardComponent } from '../shared/components/template/dashboard/dashboard.component';
+import { DashboardComponent } from '../shared/template/dashboard/dashboard.component';
 
 
 const productRoutes: Routes = [

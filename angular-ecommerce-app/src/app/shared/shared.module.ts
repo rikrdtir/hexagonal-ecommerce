@@ -16,13 +16,13 @@ import { MatExpansionModule } from '@angular/material/expansion';
 // import { MatSelectModule } from '@angular/material/select';
 // import { MatFormFieldModule } from '@angular/material/form-field';
 // components
-import { DashboardComponent } from './components/template/dashboard/dashboard.component';
-import { DemoComponent } from './components/demo/demo.component';
+import { DashboardComponent } from './template/dashboard/dashboard.component';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
     DashboardComponent,
-    DemoComponent,
+    SidenavComponent,
 
   ],
   imports: [
